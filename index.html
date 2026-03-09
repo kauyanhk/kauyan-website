@@ -29,11 +29,29 @@
       background: linear-gradient(180deg, #0b1220 0%, #0f1b34 100%);
       color: var(--text);
       line-height: 1.65;
+      position: relative;
+      overflow-x: hidden;
     }
 
     .container {
       width: min(92%, var(--max));
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-visual {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .28;
+    }
+
+    #hero-3d {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
 
     header {
@@ -142,6 +160,15 @@
       will-change: transform, opacity;
     }
 
+    .card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
     .card h3 {
       margin: 0 0 8px;
       font-size: 20px;
@@ -204,6 +231,7 @@
   </style>
 </head>
 <body>
+  <div class="hero-visual" aria-hidden="true"><canvas id="hero-3d"></canvas></div>
   <header class="container">
     <div class="tag">B2B 採購及供應服務</div>
     <h1>救恩辦館有限公司</h1>
@@ -226,18 +254,22 @@
 
     <div class="grid">
       <article class="card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="零售及供應服務" />
         <h3>零售供應</h3>
         <p>提供多元產品供應及採購支援，靈活配合不同機構及團體需求。</p>
       </article>
       <article class="card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="機構採購與代購服務" />
         <h3>學校 / 政府 / NGO 代購</h3>
         <p>熟悉採購流程，協助報價、下單及交付跟進，提升行政效率。</p>
       </article>
       <article class="card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" alt="場地租借服務" />
         <h3>場地租借</h3>
         <p>提供活動及團體用途場地安排，按人數、時段及用途作彈性建議。</p>
       </article>
       <article class="card">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80" alt="汽車服務平台" />
         <h3>汽車服務平台</h3>
         <p>連結車主及服務商，提供一站式汽車相關支援與合作對接。</p>
       </article>
@@ -272,14 +304,59 @@
     <p><a href="privacy.html">Privacy Policy</a></p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script>
     (function () {
-      if (!window.gsap) return;
-
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) return;
+
+      if (window.THREE && !prefersReducedMotion) {
+        const canvas = document.getElementById('hero-3d');
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.z = 7;
+
+        const count = window.innerWidth < 860 ? 120 : 240;
+        const geometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(count * 3);
+
+        for (let i = 0; i < count * 3; i += 3) {
+          positions[i] = (Math.random() - 0.5) * 12;
+          positions[i + 1] = (Math.random() - 0.5) * 8;
+          positions[i + 2] = (Math.random() - 0.5) * 8;
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const material = new THREE.PointsMaterial({ color: 0x78d4ff, size: 0.03, transparent: true, opacity: 0.8 });
+        const points = new THREE.Points(geometry, material);
+        scene.add(points);
+
+        function onResize() {
+          const w = window.innerWidth;
+          const h = window.innerHeight;
+          camera.aspect = w / h;
+          camera.updateProjectionMatrix();
+          renderer.setSize(w, h, false);
+        }
+
+        onResize();
+        window.addEventListener('resize', onResize);
+
+        function animate() {
+          points.rotation.y += 0.0009;
+          points.rotation.x += 0.0003;
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+      }
+
+      if (!window.gsap || prefersReducedMotion) return;
 
       gsap.registerPlugin(ScrollTrigger);
 
