@@ -110,6 +110,14 @@
       border-radius: 14px;
       padding: 16px;
     }
+    .service img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      margin-bottom: 10px;
+    }
     .service h3 { margin: 0 0 6px; }
     .service p { margin: 0; color: #cad8f2; }
 
@@ -139,7 +147,17 @@
     @media (max-width: 920px) {
       .story-grid, .service-list, .meta { grid-template-columns: 1fr; }
       header.hero { padding-top: 58px; }
-      .topbar .row { align-items: flex-start; }
+      .topbar .row { align-items: center; }
+      .nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        width: 100%;
+        padding-bottom: 2px;
+      }
+      .nav::-webkit-scrollbar { display: none; }
+      .nav a { flex: 0 0 auto; }
     }
   </style>
 </head>
@@ -180,18 +198,22 @@
       <p class="muted">以「一站式」方式處理採購與供應需要，流程清晰、溝通直接、交付可追蹤。</p>
       <div class="service-list">
         <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="機構代購與採購支援" />
           <h3>機構代購與採購支援</h3>
           <p>面向學校、政府部門、NGO 及企業團體，協助報價、下單、供應協調與交付跟進。</p>
         </article>
         <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80" alt="高端汽車用品零售" />
           <h3>高端汽車用品零售</h3>
           <p>面向零售客戶，提供優質汽車用品與配套建議，兼顧品質與實用性。</p>
         </article>
         <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" alt="香港設計產品選物" />
           <h3>香港設計產品選物</h3>
           <p>引入本地設計產品，包括公仔、留聲機等特色商品，支持香港原創品牌。</p>
         </article>
         <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="數碼服務規劃 App" />
           <h3>數碼服務規劃（App）</h3>
           <p>正規劃推出應用程式，未來將進一步優化查詢流程、資訊透明度與服務效率。</p>
         </article>
@@ -251,7 +273,7 @@
       <p>公司名稱：<strong>救恩辦館有限公司 Kau Yan Store Limited</strong></p>
       <p>電話 / WhatsApp：<strong>5923 9283</strong></p>
       <p>電郵：<strong>info@kauyanstore.com</strong></p>
-      <p>地址：<strong>柴灣角街榮興工業大廈1112B</strong></p>
+      <p>地址：<strong>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</strong></p>
       <p class="muted">服務地區：以香港為主｜一般查詢回覆時間：1–3 個工作天</p>
       <div class="cta">
         <a class="btn primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">立即 WhatsApp 查詢</a>
