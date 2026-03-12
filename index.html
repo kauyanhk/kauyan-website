@@ -147,22 +147,21 @@
     @media (max-width: 920px) {
       .story-grid, .service-list, .meta { grid-template-columns: 1fr; }
       header.hero { padding-top: 58px; }
-      .topbar .row { align-items: flex-start; flex-direction: column; }
-      .brand { margin-bottom: 2px; }
+      .topbar .row { align-items: center; }
       .nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 8px;
+        padding-bottom: 2px;
       }
+      .nav::-webkit-scrollbar { display: none; }
       .nav a {
-        text-align: center;
+        flex: 0 0 auto;
         white-space: nowrap;
         font-size: 13px;
       }
-    }
-    @media (max-width: 560px) {
-      .nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
   </style>
