@@ -121,6 +121,32 @@
     .service h3 { margin: 0 0 6px; }
     .service p { margin: 0; color: #6f6255; }
 
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .photo-item {
+      background: #fffaf2;
+      border: 1px solid #eee4d6;
+      border-radius: 14px;
+      padding: 12px;
+    }
+    .photo-item img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #eee4d6;
+      display: block;
+    }
+    .photo-item p {
+      margin: 8px 2px 0;
+      color: #6f6255;
+      font-size: 14px;
+    }
+
     .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
     .box {
       background: #fffaf2;
@@ -145,7 +171,7 @@
     footer a { color: #4b4137; text-decoration: none; }
 
     @media (max-width: 920px) {
-      .story-grid, .service-list, .meta { grid-template-columns: 1fr; }
+      .story-grid, .service-list, .meta, .photo-grid { grid-template-columns: 1fr; }
       header.hero { padding-top: 58px; }
       .topbar .row { align-items: center; }
       .nav {
@@ -213,7 +239,7 @@
           <p>面向零售客戶，提供優質汽車用品與配套建議，兼顧品質與實用性。</p>
         </article>
         <article class="service">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" alt="香港設計產品選物" />
+          <img loading="lazy" src="images/hk-design-product.jpg" alt="香港設計產品選物實拍" />
           <h3>香港設計產品選物</h3>
           <p>引入本地設計產品，包括公仔、留聲機等特色商品，支持香港原創品牌。</p>
         </article>
@@ -222,6 +248,23 @@
           <h3>數碼服務規劃（App）</h3>
           <p>正規劃推出應用程式，未來將進一步優化查詢流程、資訊透明度與服務效率。</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="design-picks" class="container">
+    <div class="panel">
+      <h2>香港設計產品選物｜實拍</h2>
+      <p class="muted">以下為實際產品及市集展示照片。</p>
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img loading="lazy" src="images/hk-design-product.jpg" alt="香港設計選物產品展示" />
+          <p>本地設計產品展示（禮品及特色選物）</p>
+        </div>
+        <div class="photo-item">
+          <img loading="lazy" src="images/hk-design-market.jpg" alt="香港設計選物市集現場" />
+          <p>市集現場展示與客戶互動情況</p>
+        </div>
       </div>
     </div>
   </section>
