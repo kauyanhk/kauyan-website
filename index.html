@@ -5,418 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>救恩辦館有限公司 Kau Yan Store Limited｜採購 x 汽車用品 x 香港設計選物</title>
   <meta name="description" content="救恩辦館有限公司｜為學校、政府、NGO 及機構提供一站式採購支援，同時經營高端汽車用品與香港設計選物。快速報價、清晰流程、高效交付。" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+HK:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+HK:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #070b14;
-      --bg-soft: #0e1627;
-      --card: rgba(255, 255, 255, 0.05);
-      --card-strong: rgba(255, 255, 255, 0.1);
-      --line: rgba(255, 255, 255, 0.14);
-      --text: #f4f7ff;
-      --muted: #b6c0d4;
-      --brand: #5ea3ff;
-      --brand-2: #83ffd5;
-      --brand-3: #a77cff;
-      --ok: #2be38c;
-      --warn: #ffcd73;
-      --danger: #ff6b7e;
-      --radius: 18px;
-      --shadow: 0 12px 40px rgba(0,0,0,.35);
-      --max: 1180px;
+      --bg: #ffffff;
+      --bg-soft: #f5f5f7;
+      --line: #e5e5e7;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --brand: #0071e3;
+      --max: 1120px;
+      --radius: 20px;
     }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Inter","Noto Sans HK","PingFang HK",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(92%,var(--max));margin:0 auto}
 
-    * { box-sizing: border-box; }
+    .topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.8);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .logo{font-weight:700;letter-spacing:.1px}
+    .nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{font-size:14px;color:#3a3a3c;padding:8px 12px;border-radius:999px}
+    .nav a:hover{background:#f2f2f4}
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: radial-gradient(1100px 800px at 10% -20%, rgba(94,163,255,0.18), transparent 60%),
-                  radial-gradient(1000px 700px at 100% 0%, rgba(167,124,255,0.16), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      font-family: "Inter", "Noto Sans HK", "PingFang HK", sans-serif;
-      line-height: 1.6;
-      scroll-behavior: smooth;
+    .hero{padding:90px 0 58px;text-align:center}
+    .eyebrow{display:inline-block;font-size:13px;color:#505055;background:#f2f2f4;padding:7px 12px;border-radius:999px;margin-bottom:14px}
+    h1{margin:0;font-size:clamp(34px,5.8vw,64px);line-height:1.06;letter-spacing:-.02em}
+    .lead{max-width:760px;margin:18px auto 0;color:var(--muted);font-size:clamp(16px,2vw,21px)}
+    .hero-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 18px;border-radius:999px;font-weight:600;border:1px solid transparent}
+    .btn.primary{background:var(--brand);color:#fff}
+    .btn.ghost{background:#f5f5f7;color:#1d1d1f;border-color:#ececef}
+
+    section{padding:26px 0}
+    .section-head{margin-bottom:14px}
+    h2{margin:0;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.015em}
+    .sub{margin:8px 0 0;color:var(--muted)}
+
+    .card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius)}
+
+    .services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .service{padding:14px}
+    .service img{aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+    .service h3{margin:12px 0 6px;font-size:20px}
+    .service p{margin:0;color:var(--muted)}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .gallery figure{margin:0;padding:10px}
+    .gallery img{aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+    .gallery figcaption{margin-top:8px;color:var(--muted);font-size:14px}
+
+    .about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .about-card{padding:16px}
+    .about-card h3{margin:0 0 6px;font-size:19px}
+    .about-card p{margin:0;color:var(--muted)}
+
+    .brand-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .brand-box{padding:16px}
+    .brand-box h3{margin-top:0}
+    .brand-list{margin:0;padding-left:18px;color:#2f2f32;display:grid;gap:7px}
+    .brand-list a{color:var(--brand)}
+
+    .contact{padding:18px}
+    .contact p{margin:8px 0;color:#38383b}
+    .contact strong{color:#000}
+
+    footer{margin-top:20px;padding:26px 0 40px;text-align:center;color:#7f7f85;border-top:1px solid var(--line)}
+
+    @media (max-width:980px){
+      .services,.gallery,.about-grid,.brand-wrap{grid-template-columns:1fr}
+      .hero{padding-top:64px}
     }
-
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-
-    .container { width: min(92%, var(--max)); margin: 0 auto; }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(7, 11, 20, .76);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 10px 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: .2px;
-      white-space: nowrap;
-    }
-
-    .logo-badge {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      color: #0c1120;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      box-shadow: 0 4px 18px rgba(94,163,255,.4);
-    }
-
-    .nav {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav a {
-      font-size: 14px;
-      color: #dce5f8;
-      border: 1px solid transparent;
-      padding: 8px 12px;
-      border-radius: 999px;
-      transition: .2s ease;
-    }
-
-    .nav a:hover {
-      border-color: var(--line);
-      background: rgba(255,255,255,.06);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 46px;
-      padding: 10px 18px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn-primary {
-      color: #08111f;
-      background: linear-gradient(135deg, var(--brand-2), var(--brand));
-      box-shadow: 0 10px 25px rgba(94,163,255,.35);
-    }
-
-    .btn-ghost {
-      border-color: var(--line);
-      color: #e8eeff;
-      background: rgba(255,255,255,.03);
-    }
-
-    .hero {
-      position: relative;
-      padding: 88px 0 56px;
-      overflow: clip;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(131,255,213,.34);
-      background: rgba(131,255,213,.08);
-      color: #b7ffe7;
-      font-size: 13px;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(32px, 6vw, 62px);
-      line-height: 1.06;
-      letter-spacing: -0.02em;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #ffffff 0%, #cde5ff 40%, #9ff9e0 100%);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .lead {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: clamp(16px, 1.9vw, 20px);
-      max-width: 60ch;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 10px;
-      margin-top: 22px;
-      flex-wrap: wrap;
-    }
-
-    .hero-metrics {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .metric {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      border-radius: 14px;
-      padding: 12px;
-    }
-
-    .metric strong { font-size: 22px; display: block; }
-    .metric span { color: #c4cee2; font-size: 13px; }
-
-    .hero-card {
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.02));
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      min-height: 440px;
-      display: grid;
-      grid-template-rows: auto 1fr;
-    }
-
-    .hero-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--line);
-      color: #c9d3e9;
-      font-size: 13px;
-    }
-
-    .hero-visual {
-      position: relative;
-      padding: 16px;
-      display: grid;
-      gap: 12px;
-      align-content: center;
-      background: radial-gradient(circle at 20% 0%, rgba(94,163,255,.26), transparent 55%);
-    }
-
-    .floating {
-      border: 1px solid var(--line);
-      background: rgba(8, 13, 25, .8);
-      border-radius: 14px;
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .floating b { display: block; }
-    .floating small { color: #aeb8cd; }
-    .chip-ok { color: var(--ok); }
-    .chip-warn { color: var(--warn); }
-
-    section { padding: 28px 0; }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: clamp(24px, 3.4vw, 40px);
-      letter-spacing: -0.01em;
-    }
-
-    .sub { color: var(--muted); margin: 0; max-width: 70ch; }
-
-    .glass {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .service {
-      padding: 14px;
-      display: grid;
-      gap: 12px;
-      min-height: 260px;
-    }
-
-    .service img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-    }
-
-    .service h3 { margin: 0; font-size: 20px; }
-    .service p { margin: 0; color: #c0cbe0; }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .gallery figure {
-      margin: 0;
-      padding: 10px;
-    }
-
-    .gallery img {
-      border-radius: 12px;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border: 1px solid var(--line);
-    }
-
-    .gallery figcaption {
-      margin-top: 8px;
-      color: #bec9de;
-      font-size: 14px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-    }
-
-    .about-card {
-      padding: 14px;
-      min-height: 170px;
-    }
-
-    .about-card h3 { margin: 0 0 6px; }
-    .about-card p { margin: 0; color: #c0cbe0; }
-
-    .brand-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .brand-box { padding: 16px; }
-    .brand-box h3 { margin-top: 0; }
-
-    .brand-list {
-      margin: 0;
-      padding-left: 18px;
-      color: #e1e9fb;
-      display: grid;
-      gap: 8px;
-    }
-
-    .brand-list a { color: #a8d6ff; }
-
-    .contact {
-      padding: 18px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .contact p { margin: 0; color: #d7def0; }
-    .contact strong { color: #f2f6ff; }
-
-    footer {
-      padding: 26px 0 42px;
-      text-align: center;
-      color: #98a4be;
-      border-top: 1px solid var(--line);
-      margin-top: 22px;
-    }
-
-    .reveal { opacity: 0; transform: translateY(18px); }
-
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-card { min-height: 340px; }
-      .services, .gallery, .about-grid, .brand-wrap { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 720px) {
-      .topbar-inner { align-items: start; flex-direction: column; }
-      .nav {
-        width: 100%;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        scrollbar-width: none;
-      }
-      .nav::-webkit-scrollbar { display: none; }
-      .nav a { white-space: nowrap; }
-
-      .hero { padding-top: 60px; }
-      .hero-metrics { grid-template-columns: 1fr; }
-      .btn { width: 100%; }
-      .hero-cta { display: grid; grid-template-columns: 1fr; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1 !important; transform: none !important; }
+    @media (max-width:720px){
+      .topbar-inner{flex-direction:column;align-items:flex-start}
+      .nav{width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+      .nav::-webkit-scrollbar{display:none}
+      .nav a{white-space:nowrap}
+      .btn{width:100%}
+      .hero-cta{display:grid;grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="logo">
-        <span class="logo-badge"><iconify-icon icon="lucide:sparkles" width="18" height="18"></iconify-icon></span>
-        <span>Kau Yan Store Limited</span>
-      </div>
+      <div class="logo">Kau Yan Store Limited</div>
       <nav class="nav" aria-label="主選單">
         <a href="#services">服務</a>
         <a href="#design-picks">選物</a>
@@ -430,115 +108,60 @@
 
   <main>
     <section class="hero container">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow"><iconify-icon icon="lucide:zap" width="15" height="15"></iconify-icon> 香港機構採購・高端零售・設計選物</div>
-          <h1 class="reveal">採購唔只係買貨，
-            <span class="gradient-text">而係幫你慳時間、慳溝通、慳風險。</span>
-          </h1>
-          <p class="lead reveal">救恩辦館有限公司為學校、政府、NGO 及企業提供一站式採購支援，同時經營高端汽車用品與香港設計選物。由報價到交付，全程清晰可追蹤。</p>
-
-          <div class="hero-cta reveal">
-            <a class="btn btn-primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">
-              <iconify-icon icon="mdi:whatsapp" width="20" height="20"></iconify-icon>
-              WhatsApp 立即查詢
-            </a>
-            <a class="btn btn-ghost" href="mailto:info@kauyanstore.com">
-              <iconify-icon icon="lucide:mail" width="18" height="18"></iconify-icon>
-              電郵報價
-            </a>
-          </div>
-
-          <div class="hero-metrics reveal">
-            <div class="metric"><strong>1-3日</strong><span>一般查詢回覆時間</span></div>
-            <div class="metric"><strong>B2B + Retail</strong><span>機構與零售雙引擎</span></div>
-            <div class="metric"><strong>HK Focused</strong><span>本地供應與服務網絡</span></div>
-          </div>
-        </div>
-
-        <aside class="hero-card reveal" aria-label="服務流程速覽">
-          <div class="hero-card-top">
-            <span>Service Flow Snapshot</span>
-            <span style="color:#97ffca">● Online</span>
-          </div>
-          <div class="hero-visual">
-            <div class="floating">
-              <div>
-                <small>STEP 01</small>
-                <b>需求收集 / 場景理解</b>
-              </div>
-              <span class="chip-ok">即日回應</span>
-            </div>
-            <div class="floating">
-              <div>
-                <small>STEP 02</small>
-                <b>報價整合 / 供應協調</b>
-              </div>
-              <span class="chip-warn">透明可追</span>
-            </div>
-            <div class="floating">
-              <div>
-                <small>STEP 03</small>
-                <b>落單交付 / 售後跟進</b>
-              </div>
-              <span class="chip-ok">穩定落地</span>
-            </div>
-          </div>
-        </aside>
+      <span class="eyebrow">香港機構採購・高端零售・設計選物</span>
+      <h1>簡潔、高效、可靠的
+        採購合作夥伴</h1>
+      <p class="lead">救恩辦館有限公司為學校、政府、NGO 及企業提供一站式採購支援，同時經營高端汽車用品與香港設計選物。由報價到交付，流程清楚，溝通直接。</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 立即查詢</a>
+        <a class="btn ghost" href="mailto:info@kauyanstore.com">電郵報價</a>
       </div>
     </section>
 
     <section id="services" class="container">
       <div class="section-head">
-        <div>
-          <h2>核心服務</h2>
-          <p class="sub">用結果導向嘅方式，幫你將「採購」由麻煩事變成流程化優勢。</p>
-        </div>
+        <h2>核心服務</h2>
+        <p class="sub">以實際交付為導向，幫你減少採購時間與協調成本。</p>
       </div>
       <div class="services">
-        <article class="service glass reveal">
+        <article class="service card">
           <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80" alt="機構代購與採購支援" />
           <h3>機構代購與採購支援</h3>
-          <p>對接學校、政府部門、NGO 及企業，協助報價、供應商統籌、下單與交付跟進，減少跨部門溝通成本。</p>
+          <p>面向學校、政府部門、NGO 及企業，協助報價、供應協調、下單與交付跟進。</p>
         </article>
-
-        <article class="service glass reveal">
+        <article class="service card">
           <img loading="lazy" src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1400&q=80" alt="高端汽車用品零售" />
           <h3>高端汽車用品零售</h3>
-          <p>精選高品質汽車用品，兼顧功能與美感，提供實用配搭建議，幫客戶買得準、用得安心。</p>
+          <p>提供高品質汽車用品與配搭建議，兼顧功能、品質與外觀。</p>
         </article>
-
-        <article class="service glass reveal">
+        <article class="service card">
           <img loading="lazy" src="images/hk-design-product.jpg" alt="香港設計產品選物" />
           <h3>香港設計產品選物</h3>
-          <p>聚焦本地原創品牌，提供禮品與特色選物，提升企業送禮與零售陳列的辨識度與故事感。</p>
+          <p>聚焦本地設計品牌，提供有故事感的禮品及特色選物。</p>
         </article>
-
-        <article class="service glass reveal">
+        <article class="service card">
           <img loading="lazy" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="數碼服務規劃" />
           <h3>數碼服務規劃（App）</h3>
-          <p>規劃中服務 App，未來將支援更即時查詢、流程追蹤與資料透明，進一步提升客戶體驗與效率。</p>
+          <p>規劃中 App 將進一步提升查詢效率、流程透明度與客戶體驗。</p>
         </article>
       </div>
     </section>
 
     <section id="design-picks" class="container">
       <div class="section-head">
-        <div>
-          <h2>香港設計選物 · 實拍</h2>
-          <p class="sub">真實產品與市集現場，唔係 stock photo 堆砌，而係有溫度嘅本地設計故事。</p>
-        </div>
+        <h2>香港設計選物 · 實拍</h2>
+        <p class="sub">真實照片展示，呈現產品細節與市集現場氛圍。</p>
       </div>
       <div class="gallery">
-        <figure class="glass reveal">
+        <figure class="card">
           <img loading="lazy" src="images/hk-design-market-stall.jpg" alt="香港設計市集攤位與手作產品展示" />
           <figcaption>香港設計市集實拍（手作產品與攤位陳列）</figcaption>
         </figure>
-        <figure class="glass reveal">
+        <figure class="card">
           <img loading="lazy" src="images/hk-design-product.jpg" alt="香港設計選物產品展示" />
           <figcaption>本地設計產品展示（禮品及特色選物）</figcaption>
         </figure>
-        <figure class="glass reveal">
+        <figure class="card">
           <img loading="lazy" src="images/hk-design-product-closeup.jpg" alt="香港設計選物產品細節" />
           <figcaption>節慶 / 禮品系列細節近拍</figcaption>
         </figure>
@@ -547,37 +170,35 @@
 
     <section id="about" class="container">
       <div class="section-head">
-        <div>
-          <h2>點解客戶會揀我哋</h2>
-          <p class="sub">我哋唔只交貨，而係幫你管理採購壓力、溝通節點同交付風險。</p>
-        </div>
+        <h2>點解客戶揀我哋</h2>
+        <p class="sub">不只交貨，而是提供更可控、更省時的採購流程。</p>
       </div>
       <div class="about-grid">
-        <article class="about-card glass reveal">
-          <h3><iconify-icon icon="lucide:shield-check" width="18" height="18"></iconify-icon> 風險可控</h3>
-          <p>由需求定義到交付跟進，流程節點清晰，讓決策更穩定、可追溯。</p>
+        <article class="about-card card">
+          <h3>流程清晰</h3>
+          <p>由需求到交付每一步都可追蹤，減少反覆溝通成本。</p>
         </article>
-        <article class="about-card glass reveal">
-          <h3><iconify-icon icon="lucide:timer" width="18" height="18"></iconify-icon> 回應速度快</h3>
-          <p>一般查詢 1–3 個工作天回覆，優先幫你拆解最急最關鍵項目。</p>
+        <article class="about-card card">
+          <h3>回應快速</h3>
+          <p>一般查詢 1–3 個工作天回覆，先處理最關鍵需求。</p>
         </article>
-        <article class="about-card glass reveal">
-          <h3><iconify-icon icon="lucide:gem" width="18" height="18"></iconify-icon> 品質與品味兼備</h3>
-          <p>兼顧機構採購效率與零售客群審美，品牌感與實用性同時到位。</p>
+        <article class="about-card card">
+          <h3>品質穩定</h3>
+          <p>兼顧機構標準與零售審美，提升整體採購體驗。</p>
         </article>
       </div>
     </section>
 
     <section id="brands" class="container">
       <div class="brand-wrap">
-        <div class="brand-box glass reveal">
+        <div class="brand-box card">
           <h3>旗下品牌</h3>
           <ul class="brand-list">
             <li>Little Paradise</li>
             <li>Chillchillcar</li>
           </ul>
         </div>
-        <div class="brand-box glass reveal">
+        <div class="brand-box card">
           <h3>Instagram</h3>
           <ul class="brand-list">
             <li><a href="https://www.instagram.com/little_paradise_hk" target="_blank" rel="noopener noreferrer">@little_paradise_hk</a></li>
@@ -588,15 +209,15 @@
     </section>
 
     <section id="contact" class="container">
-      <div class="contact glass reveal">
-        <h2>即刻開始你嘅採購需求</h2>
+      <div class="contact card">
+        <h2>聯絡我們</h2>
         <p>公司名稱：<strong>救恩辦館有限公司 Kau Yan Store Limited</strong></p>
         <p>電話 / WhatsApp：<strong>5923 9283</strong></p>
         <p>電郵：<strong>info@kauyanstore.com</strong></p>
         <p>地址：<strong>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</strong></p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 立即查詢</a>
-          <a class="btn btn-ghost" href="mailto:info@kauyanstore.com">Email 報價</a>
+          <a class="btn primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 立即查詢</a>
+          <a class="btn ghost" href="mailto:info@kauyanstore.com">Email 報價</a>
         </div>
       </div>
     </section>
@@ -607,41 +228,5 @@
     <p><a href="privacy.html">私隱政策</a></p>
     <p>© 2026 Kau Yan Store Limited. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce || !window.gsap) {
-        document.querySelectorAll('.reveal').forEach(el => {
-          el.style.opacity = 1;
-          el.style.transform = 'none';
-        });
-        return;
-      }
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.from('.topbar', {
-        y: -24,
-        opacity: 0,
-        duration: .8,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.reveal').forEach((el, i) => {
-        gsap.to(el, {
-          opacity: 1,
-          y: 0,
-          duration: .7,
-          delay: i < 4 ? i * 0.06 : 0,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 88%'
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
