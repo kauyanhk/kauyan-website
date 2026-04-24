@@ -65,11 +65,14 @@
     .about-card h3{margin:0 0 6px;font-size:19px}
     .about-card p{margin:0;color:var(--muted)}
 
-    .brand-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .brand-box{padding:16px}
-    .brand-box h3{margin-top:0}
-    .brand-list{margin:0;padding-left:18px;color:#2f2f32;display:grid;gap:7px}
-    .brand-list a{color:var(--brand)}
+    .brand-box{padding:18px}
+    .brand-box h3{margin:0}
+    .brand-box .sub{margin-top:8px}
+    .brand-grid{margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .brand-item{padding:14px;border-radius:14px;border:1px solid var(--line);background:#fff}
+    .brand-item h4{margin:0 0 6px;font-size:17px}
+    .brand-item p{margin:0;color:var(--muted)}
+    .brand-item .btn{margin-top:10px;min-height:40px;padding:8px 14px;font-size:14px}
 
     .contact{padding:18px}
     .contact p{margin:8px 0;color:#38383b}
@@ -78,7 +81,7 @@
     footer{margin-top:20px;padding:26px 0 40px;text-align:center;color:#7f7f85;border-top:1px solid var(--line)}
 
     @media (max-width:980px){
-      .services,.gallery,.about-grid,.brand-wrap{grid-template-columns:1fr}
+      .services,.gallery,.about-grid,.brand-grid{grid-template-columns:1fr}
       .hero{padding-top:64px}
     }
     @media (max-width:720px){
@@ -193,11 +196,21 @@
     <section id="brands" class="container">
       <div class="brand-box card">
         <h3>品牌與社交媒體</h3>
-        <p><strong>旗下品牌</strong>：Little Paradise、Chillchillcar</p>
-        <p><strong>Instagram</strong>：
-          <a href="https://www.instagram.com/little_paradise_hk" target="_blank" rel="noopener noreferrer">@little_paradise_hk</a>、
-          <a href="https://www.instagram.com/chillchillcar" target="_blank" rel="noopener noreferrer">@chillchillcar</a>
-        </p>
+        <p class="sub">同一個地方睇晒我哋兩個品牌嘅定位同 Instagram 最新內容。</p>
+
+        <div class="brand-grid" aria-label="品牌與 Instagram">
+          <article class="brand-item">
+            <h4>Little Paradise</h4>
+            <p>香港生活選物與設計靈感。</p>
+            <a class="btn ghost" href="https://www.instagram.com/little_paradise_hk" target="_blank" rel="noopener noreferrer">Follow @little_paradise_hk</a>
+          </article>
+
+          <article class="brand-item">
+            <h4>Chillchillcar</h4>
+            <p>汽車精品與車生活內容。</p>
+            <a class="btn ghost" href="https://www.instagram.com/chillchillcar" target="_blank" rel="noopener noreferrer">Follow @chillchillcar</a>
+          </article>
+        </div>
       </div>
     </section>
 
