@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PROPOSAL — pending owner approval. Not an approved final logo. The earlier gate seal was rejected because it read as a headstone. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">概念二：雙圓（淺色背景）</title>
+  <desc id="desc">兩個並排相疊嘅圓，松綠同銅。橫向，冇底座，冇拱門。此為提案，待東主確認。</desc>
+  <circle cx="22" cy="32" r="18" fill="#1B4336"/>
+  <circle cx="42" cy="32" r="18" fill="#C56A3A"/>
+</svg>
