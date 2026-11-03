@@ -4,44 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>關於我們｜救恩辦館有限公司</title>
-  <meta name="description" content="了解救恩辦館有限公司 Kau Yan Store Limited 的服務對象、採購支援流程、品牌方向及聯絡方式。" />
-  <style>body{margin:0;font-family:"Noto Sans TC","PingFang TC",Arial,sans-serif;background:#f7f4ee;color:#2f2a24;line-height:1.7}.wrap{width:min(92%,860px);margin:0 auto;padding:34px 0}h1{margin:0 0 12px;font-size:clamp(28px,4vw,42px)}h2{margin:0 0 10px;font-size:24px}p{color:#6f6255}.box{margin-top:14px;border:1px solid #e8dfd2;border-radius:14px;padding:16px;background:#fff;box-shadow:0 8px 24px rgba(35,60,110,.06)}ul{margin:8px 0 0;padding-left:22px;color:#6f6255}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:999px;font-weight:700;text-decoration:none}.primary{background:#0071e3;color:#fff}.ghost{background:#f3efe7;color:#2f2a24}a{color:#5d7fae}@media(max-width:640px){.btn{width:100%}}</style>
+  <meta name="description" content="救恩辦館有限公司（Kau Yan Store Limited）提供機構採購支援、香港設計訂製禮品、田園體驗，以及自家 App。" />
+  <meta name="theme-color" content="#1B4336" />
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600&family=Outfit:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/tokens.css" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("reduce");
+    })();
+  </script>
 </head>
 <body>
-  <main class="wrap">
-    <h1>關於我們</h1>
-    <p><strong>救恩辦館有限公司（Kau Yan Store Limited）</strong> 立足香港，為學校、政府部門、NGO、企業及本地零售客戶提供採購支援、汽車用品及香港設計選物服務。</p>
-    <p>我們重視清楚溝通、實際交付及穩定跟進。客戶不需要由零開始逐間供應商查詢，我們會按需要協助整理資料、報價、供應協調及交付安排。</p>
-
-    <section class="box">
-      <h2>我們服務邊類需要</h2>
-      <ul>
-        <li>學校、政府部門、NGO 及企業的採購或報價查詢</li>
-        <li>高端汽車用品及車生活相關產品</li>
-        <li>香港設計選物、禮品及特色產品採購</li>
-        <li>數碼服務及 App 相關規劃項目</li>
-      </ul>
-    </section>
-
-    <section class="box">
-      <h2>我們點樣跟進</h2>
-      <ul>
-        <li>先確認用途、數量、預算、交付日期及文件要求</li>
-        <li>再按資料整理可行方案、報價或供應方向</li>
-        <li>確認後跟進下單、交付及必要的溝通安排</li>
-      </ul>
-    </section>
-
-    <section class="box">
-      <h2>我們的信念</h2>
-      <p>我們的信念是：<strong>萬事萬托，萬試萬靈</strong>。意思不是誇大承諾，而是盡力把每個查詢處理得清楚、有交代、可跟進。</p>
-    </section>
-
-    <div class="actions" aria-label="關於頁行動">
-      <a class="btn primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 立即查詢</a>
-      <a class="btn ghost" href="contact.html">查看聯絡方式</a>
+  <a class="skip" href="#main">跳去主要內容</a>
+  <button class="nav-scrim" type="button" data-nav-scrim hidden aria-label="關閉目錄"></button>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/logo/mark.svg" alt="" width="40" height="40" />
+        <span class="brand-text">
+          <span class="brand-zh">救恩辦館</span>
+          <span class="brand-en" lang="en">Kau Yan Store</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="burger" aria-hidden="true"><i></i><i></i></span>
+        目錄
+      </button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="主選單">
+        <a href="index.html#procurement">採購</a>
+        <a href="index.html#gifts">訂製禮品</a>
+        <a href="index.html#farm">農地</a>
+        <a href="index.html#apps">App</a>
+        <a href="index.html#why">優勢</a>
+        <a href="index.html#faq">常見問題</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
     </div>
-    <p><a href="index.html">← 返回首頁</a></p>
+  </header>
+  <main id="main" class="container">
+    <header class="page-hero">
+      <p class="eyebrow" lang="en">About</p>
+      <h1>關於辦館</h1>
+      <p class="lede">救恩辦館有限公司（Kau Yan Store Limited）喺香港，幫學校、政府部門、非政府機構同公司把事情跟到有交代。</p>
+    </header>
+    <div class="stack">
+      <section class="panel">
+        <h2>我哋而家做四條線</h2>
+        <ul>
+          <li>機構採購支援：報價、供應商協調、落單、送貨跟進。</li>
+          <li>香港設計訂製紀念品同禮品：面向機構，可以按用途、對象同預算一齊訂方向。</li>
+          <li>農地基地：田園體驗已經開放，適合幼稚園帶小朋友試下做農活。汽車文化基地（Chillchillcar）籌備中，未開放參觀。</li>
+          <li>自家 App：香港洗車地圖（Carhub）同香港電工筆試，已經喺 App Store 推出，由東主自行開發。</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>我哋點樣跟進</h2>
+        <ul>
+          <li>先確認用途、數量、預算、交付日期同文件要求。</li>
+          <li>再按資料整理可行方案、報價或供應方向。</li>
+          <li>確認之後跟進落單、交付同必要嘅溝通。</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>田園體驗</h2>
+        <p>老師可以帶幼稚園同小朋友嚟農地試下做農活。請用 WhatsApp 講低人數、年齡同學齡，我哋會回覆檔期。辦公室喺荃灣柴灣角，農地係另一個場地，位置會喺回覆時一併告知。</p>
+      </section>
+      <section class="panel">
+        <h2>我哋嘅信念</h2>
+        <p>我哋嘅信念係：<strong>萬事萬托，萬試萬靈</strong>。意思唔係誇大承諾，而係盡力將每個查詢處理得清楚、有交代、跟得到。</p>
+      </section>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 查詢<span class="sr-only">（開新分頁）</span></a>
+        <a class="btn btn-ghost" href="contact.html">查看聯絡方式</a>
+      </div>
+      <p><a class="back" href="index.html">返回首頁</a></p>
+    </div>
   </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/logo/mark-on-dark.svg" alt="" width="44" height="44" />
+          <span class="brand-text">
+            <span class="brand-zh">救恩辦館</span>
+            <span class="brand-en" lang="en">Kau Yan Store</span>
+          </span>
+        </a>
+        <p class="footer-motto">萬事萬托，萬試萬靈</p>
+      </div>
+      <div>
+        <p class="footer-label" lang="en">Office</p>
+        <address>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</address>
+      </div>
+      <div>
+        <p class="footer-label" lang="en">Contact</p>
+        <p><a href="tel:+85259239283">5923 9283</a></p>
+        <p><a href="mailto:info@kauyanstore.com">info@kauyanstore.com</a></p>
+      </div>
+      <div>
+        <p class="footer-label" lang="en">Index</p>
+        <div class="footer-links">
+          <a href="about.html" aria-current="page">關於</a>
+          <a href="contact.html">聯絡</a>
+          <a href="privacy.html">私隱政策</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© 2026 Kau Yan Store Limited. All Rights Reserved.</p>
+      <p>救恩辦館有限公司</p>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

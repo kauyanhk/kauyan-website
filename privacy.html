@@ -4,267 +4,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>私隱政策｜救恩辦館有限公司 Kau Yan Store Limited</title>
-  <meta name="description" content="救恩辦館有限公司（Kau Yan Store Limited）私隱政策：網站及流動應用程式（包括香港電工考試模擬）的資料處理、第三方服務及聯絡方式。" />
-  <style>
-
-    :root {
-      --bg: #f7f4ee;
-      --card: #fffdf9;
-      --line: #e8dfd2;
-      --text: #2f2a24;
-      --muted: #74695c;
-      --accent: #5d7fae;
-      --max: 980px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #fdfbf7 0%, var(--bg) 45%, #f3eee6 100%);
-      line-height: 1.75;
-    }
-
-    .wrap {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-      padding: 34px 0 42px;
-    }
-
-    .top {
-      margin-bottom: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .crumb a {
-      color: #4b4137;
-      text-decoration: none;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 13px;
-      background: #fff;
-    }
-
-    .last-updated {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .hero {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: clamp(20px, 3vw, 30px);
-      background: var(--card);
-      margin-bottom: 18px;
-      box-shadow: 0 8px 24px rgba(35, 60, 110, 0.06);
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(30px, 4vw, 44px);
-      line-height: 1.2;
-      letter-spacing: .2px;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      margin: 0;
-      max-width: 820px;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--card);
-      padding: clamp(18px, 2.8vw, 26px);
-      margin-bottom: 14px;
-      box-shadow: 0 8px 24px rgba(35, 60, 110, 0.06);
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-
-    p, li {
-      color: #6f6255;
-      margin: 0 0 8px;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .contact-box {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #fffaf2;
-      padding: 14px;
-      margin-top: 10px;
-    }
-
-    .contact-box strong {
-      color: #4b4137;
-    }
-
-    a { color: var(--accent); }
-
-    footer {
-      border-top: 1px solid var(--line);
-      margin-top: 14px;
-      padding-top: 16px;
-      color: #8a7d6f;
-      font-size: 14px;
-      text-align: center;
-    }
-
-  </style>
+  <meta name="description" content="救恩辦館有限公司（Kau Yan Store Limited）私隱政策：網站及流動應用程式（包括香港電工考試模擬、香港洗車地圖 CarHub）的資料處理、第三方服務及聯絡方式。" />
+  <meta name="theme-color" content="#1B4336" />
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600&family=Outfit:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/tokens.css" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("reduce");
+    })();
+  </script>
 </head>
 <body>
-  <main class="wrap">
-    <div class="top">
-      <div class="crumb"><a href="index.html">← 返回首頁</a></div>
-      <div class="last-updated">最後更新：2026-03-13</div>
+  <a class="skip" href="#main">跳去主要內容</a>
+  <button class="nav-scrim" type="button" data-nav-scrim hidden aria-label="關閉目錄"></button>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/logo/mark.svg" alt="" width="40" height="40" />
+        <span class="brand-text">
+          <span class="brand-zh">救恩辦館</span>
+          <span class="brand-en" lang="en">Kau Yan Store</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="burger" aria-hidden="true"><i></i><i></i></span>
+        目錄
+      </button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="主選單">
+        <a href="index.html#procurement">採購</a>
+        <a href="index.html#gifts">訂製禮品</a>
+        <a href="index.html#farm">農地</a>
+        <a href="index.html#apps">App</a>
+        <a href="index.html#why">優勢</a>
+        <a href="index.html#faq">常見問題</a>
+        <a href="index.html#contact">聯絡</a>
+      </nav>
     </div>
-
-    <section class="hero">
+  </header>
+  <main id="main" class="container">
+    <header class="page-hero">
+      <p class="eyebrow" lang="en">Privacy</p>
       <h1>私隱政策</h1>
-      <p class="subtitle">
-        救恩辦館有限公司（Kau Yan Store Limited）（下稱「本公司」、「我們」）重視你的私隱。
-        本政策說明你使用本網站及相關服務時，我們如何收集、使用、保存及保護資料。
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>App 專用私隱補充（香港電工考試模擬）</h2>
-      <ul>
-        <li>本 App 為「香港電工考試模擬」，用於提供選擇題（MC）練習與成績回饋。</li>
-        <li>本 App <strong>不設帳戶登入</strong>，亦不要求提供姓名、電話、地址、身份證號碼等個人識別資料。</li>
-        <li>本 App <strong>不提供第三方廣告</strong>，亦不進行跨 App / 跨網站追蹤。</li>
-        <li>題目資料由 Google Sheets 管理，題目圖片透過 Firebase 服務載入，以維持內容更新與穩定傳輸。</li>
-        <li>如有技術性連線日誌，僅限系統運作、故障排查及安全用途，不用作識別個別用戶身份。</li>
-        <li>App 內購買（In-App Purchase）由 Apple 處理，付款資料（如信用卡）由 Apple 管理，本公司不會直接儲存或接觸完整付款資料。</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>App 專用私隱補充（香港洗車地圖 CarHub）</h2>
-      <ul>
-        <li>本 App「香港洗車地圖（CarHub）」由救恩辦館有限公司（Kau Yan Store Limited）開發及營運。</li>
-        <li>聯絡方式：<a href="mailto:info@kauyanstore.com">info@kauyanstore.com</a>。</li>
-        <li>本 App 可能收集：裝置大概位置（GPS）及基本使用資料（例如搜尋/瀏覽行為），用於顯示附近洗車服務及改善使用體驗。</li>
-        <li>定位功能只會在使用者授權後啟用，用於顯示附近服務或計算距離；本 App 不會持續追蹤使用者位置。</li>
-        <li>本 App 可能連接第三方地圖服務（如 Apple Maps / Google Maps）。當你使用該等服務時，相關資料將受其私隱政策約束。</li>
-        <li>我們不會出售、出租或分享使用者的個人資料予第三方。</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>1) 適用範圍</h2>
-      <ul>
-        <li>本公司官方網站（包括 <a href="https://www.kauyanstore.com">www.kauyanstore.com</a>）</li>
-        <li>本公司提供的查詢、代購、零售及後續客戶支援服務</li>
-        <li>未來推出之流動應用程式（如適用）</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>2) 我們可能收集的資料</h2>
-      <ul>
-        <li>聯絡資料：姓名、電話、電郵</li>
-        <li>查詢內容：你提交的需求、報價或服務要求</li>
-        <li>基本技術資料：瀏覽器類型、裝置資訊、網站使用記錄</li>
-        <li>未來 App 功能（如適用）：位置資訊（只在功能需要及你授權下）</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>3) 收集資料用途</h2>
-      <ul>
-        <li>回覆查詢、提供報價及跟進服務</li>
-        <li>客戶支援及售後溝通</li>
-        <li>改善網站、服務流程及使用體驗</li>
-        <li>法律或監管要求下的合規處理（如適用）</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>4) 資料分享與第三方</h2>
-      <p>我們不會出售你的個人資料。在以下情況下，我們可能與第三方分享必要資料：</p>
-      <ul>
-        <li>技術服務供應商（如網站託管、通訊或系統支援）</li>
-        <li>法律要求或執法機關要求</li>
-        <li>為完成你要求的服務而必要的合作方（僅限必要範圍）</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>5) Cookie 與網站技術</h2>
-      <p>
-        本網站可能使用必要 Cookie / 本地儲存（Local Storage）以維持網站運作與基本體驗。
-        我們不會在未經同意下進行不必要的廣告追蹤。
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>6) 資料保存</h2>
-      <p>
-        我們只會在達成收集目的所需期間內保存資料，並於不再需要時刪除或匿名化處理
-        （法律另有要求除外）。
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>7) 資料安全</h2>
-      <p>
-        我們採取合理技術及管理措施保障資料安全（例如權限控管、傳輸保護等）。
-        但請理解，互聯網傳輸及電子儲存無法保證 100% 絕對安全。
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>8) 你的權利</h2>
-      <ul>
-        <li>查閱我們持有的你的個人資料</li>
-        <li>要求更正不準確資料</li>
-        <li>在合理情況下要求刪除資料</li>
-      </ul>
-      <p>如需行使上述權利，請透過本頁下方聯絡方式與我們聯絡。</p>
-    </section>
-
-    <section class="card">
-      <h2>9) 未成年人</h2>
-      <p>本公司不會刻意收集未成年人個人資料。若你為未成年人，請在家長或監護人同意下使用本服務。</p>
-    </section>
-
-    <section class="card">
-      <h2>10) 政策更新</h2>
-      <p>我們可不時更新本政策。更新版本會於本頁公布，並註明最後更新日期。</p>
-    </section>
-
-    <section class="card">
-      <h2>11) 聯絡我們</h2>
-      <p>如你有任何私隱查詢，請聯絡：</p>
-      <div class="contact-box">
+      <p class="lede">救恩辦館有限公司（Kau Yan Store Limited）（下稱「本公司」、「我們」）重視你的私隱。本政策說明你使用本網站及相關服務時，我們如何收集、使用、保存及保護資料。</p>
+      <p class="fine">最後更新：2026-11-03</p>
+    </header>
+    <div class="stack">
+      <section class="panel">
+        <h2>App 專用私隱補充（香港電工考試模擬）</h2>
+        <ul>
+          <li>本 App 為「香港電工考試模擬」，用於提供選擇題（MC）練習與成績回饋。</li>
+          <li>本 App <strong>不設帳戶登入</strong>，亦不要求提供姓名、電話、地址、身份證號碼等個人識別資料。</li>
+          <li>本 App <strong>不提供第三方廣告</strong>，亦不進行跨 App / 跨網站追蹤。</li>
+          <li>題目資料由 Google Sheets 管理，題目圖片透過 Firebase 服務載入，以維持內容更新與穩定傳輸。</li>
+          <li>如有技術性連線日誌，僅限系統運作、故障排查及安全用途，不用作識別個別用戶身份。</li>
+          <li>App 內購買（In-App Purchase）由 Apple 處理，付款資料（如信用卡）由 Apple 管理，本公司不會直接儲存或接觸完整付款資料。</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>App 專用私隱補充（香港洗車地圖 CarHub）</h2>
+        <ul>
+          <li>本 App「香港洗車地圖（CarHub）」由救恩辦館有限公司（Kau Yan Store Limited）開發及營運。</li>
+          <li>聯絡方式：<a href="mailto:info@kauyanstore.com">info@kauyanstore.com</a>。</li>
+          <li>本 App 可能收集：裝置大概位置（GPS）及基本使用資料（例如搜尋/瀏覽行為），用於顯示附近洗車服務及改善使用體驗。</li>
+          <li>定位功能只會在使用者授權後啟用，用於顯示附近服務或計算距離；本 App 不會持續追蹤使用者位置。</li>
+          <li>本 App 可能連接第三方地圖服務（如 Apple Maps / Google Maps）。當你使用該等服務時，相關資料將受其私隱政策約束。</li>
+          <li>我們不會出售、出租或分享使用者的個人資料予第三方。</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>1) 適用範圍</h2>
+        <ul>
+          <li>本公司官方網站（包括 <a href="https://www.kauyanstore.com">www.kauyanstore.com</a>）</li>
+          <li>本公司提供的查詢、機構採購支援、訂製禮品、田園體驗及後續客戶支援服務</li>
+          <li>本公司流動應用程式，包括香港洗車地圖（CarHub）及香港電工筆試（香港電工考試模擬）</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>2) 我們可能收集的資料</h2>
+        <ul>
+          <li>聯絡資料：姓名、電話、電郵</li>
+          <li>查詢內容：你提交的需求、報價或服務要求</li>
+          <li>基本技術資料：瀏覽器類型、裝置資訊、網站使用記錄</li>
+          <li>App 功能（如適用）：位置資訊（只在功能需要及你授權下）</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>3) 收集資料用途</h2>
+        <ul>
+          <li>回覆查詢、提供報價及跟進服務</li>
+          <li>客戶支援及售後溝通</li>
+          <li>改善網站、服務流程及使用體驗</li>
+          <li>法律或監管要求下的合規處理（如適用）</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>4) 資料分享與第三方</h2>
+        <p>我們不會出售你的個人資料。在以下情況下，我們可能與第三方分享必要資料：</p>
+        <ul>
+          <li>技術服務供應商（如網站託管、通訊或系統支援）</li>
+          <li>法律要求或執法機關要求</li>
+          <li>為完成你要求的服務而必要的合作方（僅限必要範圍）</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>5) Cookie 與網站技術</h2>
+        <p>本網站可能使用必要 Cookie / 本地儲存（Local Storage）以維持網站運作與基本體驗。我們不會在未經同意下進行不必要的廣告追蹤。</p>
+      </section>
+      <section class="panel">
+        <h2>6) 資料保存</h2>
+        <p>我們只會在達成收集目的所需期間內保存資料，並於不再需要時刪除或匿名化處理（法律另有要求除外）。</p>
+      </section>
+      <section class="panel">
+        <h2>7) 資料安全</h2>
+        <p>我們採取合理技術及管理措施保障資料安全（例如權限控管、傳輸保護等）。但請理解，互聯網傳輸及電子儲存無法保證 100% 絕對安全。</p>
+      </section>
+      <section class="panel">
+        <h2>8) 你的權利</h2>
+        <ul>
+          <li>查閱我們持有的你的個人資料</li>
+          <li>要求更正不準確資料</li>
+          <li>在合理情況下要求刪除資料</li>
+        </ul>
+        <p>如需行使上述權利，請透過本頁下方聯絡方式與我們聯絡。</p>
+      </section>
+      <section class="panel">
+        <h2>9) 未成年人</h2>
+        <p>本公司不會刻意收集未成年人個人資料。若你為未成年人，請在家長或監護人同意下使用本服務。</p>
+      </section>
+      <section class="panel">
+        <h2>10) 政策更新</h2>
+        <p>我們可不時更新本政策。更新版本會於本頁公布，並註明最後更新日期。</p>
+      </section>
+      <section class="panel">
+        <h2>11) 聯絡我們</h2>
+        <p>如你有任何私隱查詢，請聯絡：</p>
         <p><strong>公司名稱：</strong>救恩辦館有限公司（Kau Yan Store Limited）</p>
         <p><strong>電郵：</strong><a href="mailto:info@kauyanstore.com">info@kauyanstore.com</a></p>
         <p><strong>電話 / WhatsApp：</strong>5923 9283</p>
         <p><strong>地址：</strong>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</p>
         <p><strong>一般回覆時間：</strong>1–3 個工作天</p>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2026 Kau Yan Store Limited. All Rights Reserved.</p>
-    </footer>
+      </section>
+      <p><a class="back" href="index.html">返回首頁</a></p>
+    </div>
   </main>
+  <footer class="site-footer">
+    <div class="container footer-base">
+      <p>© 2026 Kau Yan Store Limited. All Rights Reserved.</p>
+      <p><a href="privacy.html">私隱政策</a></p>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
