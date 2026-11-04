@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PROPOSAL ONLY. Not applied to the live site. Distinct from the rejected gate, KY circle, double circle, and sprout. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 62" role="img" aria-labelledby="title desc">
+  <title id="title">方向二：票根（深色背景）</title>
+  <desc id="desc">橫向單據，右邊一個圓缺口。單色。提案，未套用。</desc>
+  <path fill="#F4F0E8" fill-rule="evenodd" d="M10 6 H46 C56 6 62 12 62 22 V40 C62 50 56 56 46 56 H10 C4 56 0 50 0 44 V18 C0 12 4 6 10 6 Z M62 31 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0"/>
+</svg>
