@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>標誌提案｜救恩辦館有限公司</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../tokens.css" />
+  <style>
+    body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: "Noto Sans TC", "PingFang HK", sans-serif; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 32px 0 56px; }
+    .banner {
+      display: inline-flex; align-items: center;
+      background: var(--color-copper-deep); color: var(--color-paper);
+      border-radius: var(--radius-pill); padding: 6px 12px; font-size: 13px; letter-spacing: 0.06em;
+    }
+    h1 { font-family: "Noto Serif TC", serif; font-weight: 600; font-size: clamp(36px, 5vw, 52px); margin: 12px 0 8px; }
+    .lead { color: var(--color-ink-soft); max-width: 46rem; margin: 0; }
+    .grid { display: grid; gap: 16px; margin-top: 28px; }
+    @media (min-width: 860px) { .grid { grid-template-columns: 1.2fr 0.8fr; } }
+    article {
+      background: var(--color-paper-raised);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+    }
+    article.picked { outline: 2px solid var(--color-pine); }
+    .kicker { margin: 0 0 6px; font-family: Outfit, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-pine); }
+    h2 { font-family: "Noto Serif TC", serif; font-size: 28px; margin: 0 0 8px; }
+    p { margin: 0; color: var(--color-ink-soft); }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+    .swatch { border-radius: var(--radius-lg); min-height: 148px; display: grid; place-items: center; padding: 16px; }
+    .swatch img { width: min(100%, 220px); height: auto; }
+    .light { background: var(--color-paper); border: 1px solid var(--line); }
+    .dark { background: var(--color-night); }
+    .note { margin-top: 10px; font-size: 14px; }
+    .sizes { display: flex; gap: 16px; align-items: end; margin-top: 14px; }
+    .sizes figure { margin: 0; }
+    .sizes figcaption { font-size: 12px; color: var(--color-muted); margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="banner">標誌提案 · 待東主揀 · 未核定</p>
+    <h1>三個方向，唔再係門印</h1>
+    <p class="lead">上一版直立拱門加門檻，輪廓似墓碑，已棄用。下面三個都係圓形或橫向，冇石碑、冇台座。網站而家暫時用概念一，方便睇成個站。</p>
+    <div class="grid">
+      <article class="picked">
+        <p class="kicker">Concept 01 · 網站暫用</p>
+        <h2>圓字 KY</h2>
+        <p>正圓入面係 KY，頂上一點銅。字母一望就知係名。圓形，唔係直立碑。</p>
+        <div class="pair">
+          <div class="swatch light"><img src="lockup.svg" alt="淺色背景上的圓字 KY 同救恩辦館文字標誌"></div>
+          <div class="swatch dark"><img src="lockup-on-dark.svg" alt="深色背景上的圓字 KY 同救恩辦館文字標誌"></div>
+        </div>
+        <div class="sizes">
+          <figure><img src="concepts/ky.svg" width="16" height="16" alt=""><figcaption>16</figcaption></figure>
+          <figure><img src="concepts/ky.svg" width="24" height="24" alt=""><figcaption>24</figcaption></figure>
+          <figure><img src="concepts/ky.svg" width="32" height="32" alt=""><figcaption>32</figcaption></figure>
+          <figure><img src="concepts/ky.svg" width="64" height="64" alt="圓字 KY"><figcaption>64</figcaption></figure>
+        </div>
+      </article>
+      <article>
+        <p class="kicker">Concept 02</p>
+        <h2>雙圓</h2>
+        <p>兩個圓左右相疊，松同銅。橫向，冇腳。</p>
+        <div class="pair">
+          <div class="swatch light"><img src="concepts/overlap.svg" width="120" alt="淺色背景上的雙圓標誌"></div>
+          <div class="swatch dark"><img src="concepts/overlap-on-dark.svg" width="120" alt="深色背景上的雙圓標誌"></div>
+        </div>
+      </article>
+      <article>
+        <p class="kicker">Concept 03</p>
+        <h2>橫芽</h2>
+        <p>闊膠囊入面兩片圓葉同一粒銅種子。闊大於高。</p>
+        <div class="pair">
+          <div class="swatch light"><img src="concepts/sprout.svg" width="180" alt="淺色背景上的橫芽標誌"></div>
+          <div class="swatch dark"><img src="concepts/sprout-on-dark.svg" width="180" alt="深色背景上的橫芽標誌"></div>
+        </div>
+        <p class="note">細尺寸會糊，唔建議做 favicon。</p>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

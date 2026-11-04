@@ -3,267 +3,434 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>救恩辦館有限公司 Kau Yan Store Limited｜採購 x 汽車用品 x 香港設計選物</title>
-  <meta name="description" content="救恩辦館有限公司｜為學校、政府、NGO 及機構提供一站式採購支援，同時經營高端汽車用品與香港設計選物。快速報價、清晰流程、高效交付。" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+HK:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --bg-soft: #f5f5f7;
-      --line: #e5e5e7;
-      --text: #1d1d1f;
-      --muted: #6e6e73;
-      --brand: #0071e3;
-      --max: 1120px;
-      --radius: 20px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Inter","Noto Sans HK","PingFang HK",sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(92%,var(--max));margin:0 auto}
-
-    .topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.8);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
-    .logo{font-weight:700;letter-spacing:.1px}
-    .nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-    .nav a{font-size:14px;color:#3a3a3c;padding:8px 12px;border-radius:999px}
-    .nav a:hover{background:#f2f2f4}
-
-    .hero{padding:90px 0 58px;text-align:center}
-    .eyebrow{display:inline-block;font-size:13px;color:#505055;background:#f2f2f4;padding:7px 12px;border-radius:999px;margin-bottom:14px}
-    h1{margin:0;font-size:clamp(34px,5.8vw,64px);line-height:1.06;letter-spacing:-.02em}
-    .lead{max-width:760px;margin:18px auto 0;color:var(--muted);font-size:clamp(16px,2vw,21px)}
-    .hero-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 18px;border-radius:999px;font-weight:600;border:1px solid transparent}
-    .btn.primary{background:var(--brand);color:#fff}
-    .btn.ghost{background:#f5f5f7;color:#1d1d1f;border-color:#ececef}
-
-    section{padding:26px 0}
-    .section-head{margin-bottom:14px}
-    h2{margin:0;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.015em}
-    .sub{margin:8px 0 0;color:var(--muted)}
-
-    .card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius)}
-
-    .services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .service{padding:14px}
-    .service img{aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
-    .service h3{margin:12px 0 6px;font-size:20px}
-    .service p{margin:0;color:var(--muted)}
-
-    .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .gallery figure{margin:0;padding:10px}
-    .gallery img{aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
-    .gallery figcaption{margin-top:8px;color:var(--muted);font-size:14px}
-
-    .about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .about-card{padding:16px}
-    .about-card h3{margin:0 0 6px;font-size:19px}
-    .about-card p{margin:0;color:var(--muted)}
-
-    .brand-box{padding:18px}
-    .brand-box h3{margin:0}
-    .brand-box .sub{margin-top:8px}
-    .brand-grid{margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .brand-item{padding:14px;border-radius:14px;border:1px solid var(--line);background:#fff}
-    .brand-item h4{margin:0 0 6px;font-size:17px}
-    .brand-item p{margin:0;color:var(--muted)}
-    .brand-item .btn{margin-top:10px;min-height:40px;padding:8px 14px;font-size:14px}
-
-    .contact{padding:18px}
-    .contact p{margin:8px 0;color:#38383b}
-    .contact strong{color:#000}
-
-    .faq-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .faq-item{padding:16px}
-    .faq-item h3{margin:0 0 6px;font-size:18px}
-    .faq-item p{margin:0;color:var(--muted)}
-
-    footer{margin-top:20px;padding:26px 0 40px;text-align:center;color:#7f7f85;border-top:1px solid var(--line)}
-
-    @media (max-width:980px){
-      .services,.gallery,.about-grid,.brand-grid,.faq-list{grid-template-columns:1fr}
-      .hero{padding-top:64px}
-    }
-    @media (max-width:720px){
-      .topbar-inner{flex-direction:column;align-items:flex-start}
-      .nav{width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
-      .nav::-webkit-scrollbar{display:none}
-      .nav a{white-space:nowrap}
-      .btn{width:100%}
-      .hero-cta{display:grid;grid-template-columns:1fr}
-    }
-  </style>
+  <title>救恩辦館有限公司｜機構採購、訂製禮品、田園體驗</title>
+  <meta name="description" content="救恩辦館有限公司（Kau Yan Store Limited）為學校、政府部門、非政府機構同公司提供採購支援同香港設計訂製禮品。田園體驗現正開放，汽車文化基地籌備中。WhatsApp 5923 9283。" />
+  <meta name="theme-color" content="#1B4336" />
+  <link rel="canonical" href="https://www.kauyanstore.com/" />
+  <meta property="og:title" content="救恩辦館有限公司｜Kau Yan Store Limited" />
+  <meta property="og:description" content="機構採購、香港設計訂製禮品、田園體驗，同一個窗口跟進。汽車文化基地籌備中。自家 App 已經推出。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kauyanstore.com/" />
+  <meta property="og:locale" content="zh_HK" />
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600&family=Outfit:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css" />
+  <link rel="stylesheet" href="assets/tokens.css" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) root.classList.add("reduce");
+      window.setTimeout(function () {
+        if (!root.classList.contains("motion-ready") && !root.classList.contains("reduce")) {
+          root.classList.add("no-motion");
+        }
+      }, 1600);
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "救恩辦館有限公司",
+    "alternateName": "Kau Yan Store Limited",
+    "url": "https://www.kauyanstore.com",
+    "telephone": "+85259239283",
+    "email": "info@kauyanstore.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "柴灣角街83-93號榮興工業大廈11樓12B室",
+      "addressLocality": "荃灣",
+      "addressRegion": "新界",
+      "addressCountry": "HK"
+    },
+    "areaServed": "HK"
+  }
+  </script>
 </head>
-<body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="logo">Kau Yan Store Limited</div>
-      <nav class="nav" aria-label="主選單">
-        <a href="#services">服務</a>
-        <a href="#services">產品分類</a>
-        <a href="#design-picks">選物</a>
-        <a href="#about">優勢</a>
-        <a href="#faq">FAQ</a>
-        <a href="#brands">品牌</a>
+<body data-smooth>
+  <a class="skip" href="#main">跳去主要內容</a>
+  <button class="nav-scrim" type="button" data-nav-scrim hidden aria-label="關閉目錄"></button>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <!-- Logo proposal, pending owner approval. See BRAND.md. -->
+        <img class="brand-mark" src="assets/logo/mark.svg" alt="" width="40" height="40" />
+        <span class="brand-text">
+          <span class="brand-zh">救恩辦館</span>
+          <span class="brand-en" lang="en">Kau Yan Store</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="burger" aria-hidden="true"><i></i><i></i></span>
+        目錄
+      </button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="主選單">
+        <a href="#procurement">採購</a>
+        <a href="#gifts">訂製禮品</a>
+        <a href="#farm">農地</a>
+        <a href="#apps">App</a>
+        <a href="#why">優勢</a>
+        <a href="#faq">常見問題</a>
         <a href="#contact">聯絡</a>
-        <a href="privacy.html">私隱政策</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero container">
-      <span class="eyebrow">香港機構採購・高端零售・設計選物</span>
-      <h1>簡潔、高效、可靠的
-        採購合作夥伴</h1>
-      <p class="lead">救恩辦館有限公司為學校、政府、NGO 及企業提供一站式採購支援，同時經營高端汽車用品與香港設計選物。由報價到交付，流程清楚，溝通直接。</p>
-      <div class="hero-cta">
-        <a class="btn primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 立即查詢</a>
-        <a class="btn ghost" href="mailto:info@kauyanstore.com">電郵報價</a>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="mark-rule" aria-hidden="true"></span>
+          <p class="eyebrow" lang="en">Kau Yan Store · Hong Kong</p>
+          <h1>一間辦館，跟到底</h1>
+          <p class="lede">救恩辦館有限公司服務學校、政府部門、非政府機構同公司。採購支援、香港設計訂製禮品、幼稚園田園體驗，同一個窗口跟進。汽車文化基地籌備中。自家 App 已經推出。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 查詢<span class="sr-only">（開新分頁）</span></a>
+            <a class="btn btn-ghost" href="mailto:info@kauyanstore.com">電郵報價</a>
+          </div>
+          <p class="fine">一般查詢 1 至 3 個工作天內回覆。</p>
+        </div>
+        <aside class="hero-slab" aria-label="四條業務">
+          <img class="slab-mark" src="assets/logo/mark-on-dark.svg" alt="" width="168" height="168" />
+          <p class="eyebrow" lang="en">Four lines · One desk</p>
+          <p class="slab-title">四條線，<br />一個窗口</p>
+          <ol class="slab-list">
+            <li>
+              <a href="#procurement">
+                <span class="slab-no">01</span>
+                <span><b>機構採購支援</b><small>報價、協調、落單、送貨</small></span>
+                <span class="slab-status">接受查詢</span>
+              </a>
+            </li>
+            <li>
+              <a href="#gifts">
+                <span class="slab-no">02</span>
+                <span><b>香港設計訂製</b><small>機構紀念品同禮品</small></span>
+                <span class="slab-status">機構專用</span>
+              </a>
+            </li>
+            <li class="is-live">
+              <a href="#farm">
+                <span class="slab-no">03</span>
+                <span><b>農地基地</b><small>田園體驗開放 · 車文化籌備中</small></span>
+                <span class="slab-status">田園開放</span>
+              </a>
+            </li>
+            <li>
+              <a href="#apps">
+                <span class="slab-no">04</span>
+                <span><b>自家 App</b><small>Carhub · 電工考試</small></span>
+                <span class="slab-status">已推出</span>
+              </a>
+            </li>
+          </ol>
+          <p class="slab-foot">辦公室 · 荃灣柴灣角</p>
+        </aside>
       </div>
     </section>
 
-    <section id="services" class="container">
-      <div class="section-head">
-        <h2>核心服務</h2>
-        <p class="sub">以實際交付為導向，幫你減少採購時間與協調成本。</p>
+    <section class="section container" id="procurement">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" lang="en">Procurement</p>
+        <h2>機構採購支援</h2>
+        <p class="lede">學校、政府部門、非政府機構同公司，唔使自己逐間供應商問。我哋幫手報價、協調供應、落單同跟進送貨。</p>
       </div>
-      <div class="services">
-        <article class="service card">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80" alt="機構代購與採購支援" />
-          <h3>機構代購與採購支援</h3>
-          <p>面向學校、政府部門、NGO 及企業，協助報價、供應協調、下單與交付跟進。</p>
+      <ol class="steps" data-reveal-group>
+        <li data-reveal>
+          <div class="step-no">01</div>
+          <h3>先講需要</h3>
+          <p>產品類型、數量、預算、交付日期、送貨地點，以及有冇指定規格或文件要求。</p>
+        </li>
+        <li data-reveal>
+          <div class="step-no">02</div>
+          <h3>再對方案</h3>
+          <p>按你俾嘅資料整理可行方向同報價，同供應端對齊。</p>
+        </li>
+        <li data-reveal>
+          <div class="step-no">03</div>
+          <h3>跟到交付</h3>
+          <p>確認之後跟進落單同送貨，過程有交代。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container" id="gifts">
+      <div class="section-toolbar">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow" lang="en">B2B · Hong Kong Design</p>
+          <h2>香港設計訂製紀念品／禮品</h2>
+          <p class="lede">為機構度身訂製紀念品同禮品，方向係香港設計。服務學校、公司同團體。下面係實拍作品集，包括市集現場同產品細節。</p>
+        </div>
+      </div>
+      <div class="gallery" data-reveal-group>
+        <figure class="piece piece-stall" data-reveal>
+          <div class="shot">
+            <img src="images/hk-design-market-stall.jpg" width="1600" height="1200" alt="市集攤位近鏡，木圍欄內陳列毛絨小馬、御守同紙盒" />
+            <span class="shot-lift" aria-hidden="true"></span>
+          </div>
+          <figcaption><span class="cap-en" lang="en">Stall</span>攤位陳列：馬年主題手作同包裝</figcaption>
+        </figure>
+        <figure class="piece piece-product" data-reveal>
+          <div class="shot">
+            <img src="images/hk-design-product.jpg" width="1600" height="900" alt="木架上掛住彩色御守，前面排住馬年御守禮盒" />
+            <span class="shot-lift" aria-hidden="true"></span>
+          </div>
+          <figcaption><span class="cap-en" lang="en">Object</span>御守同禮盒細節</figcaption>
+        </figure>
+        <figure class="piece piece-market" data-reveal>
+          <div class="shot">
+            <img src="images/hk-design-market.jpg" width="1600" height="1200" alt="香港設計市集現場，攤位上有手作小馬同禮盒，有人駐足睇貨" />
+            <span class="shot-lift" aria-hidden="true"></span>
+          </div>
+          <figcaption><span class="cap-en" lang="en">Market</span>市集現場：本地設計攤位</figcaption>
+        </figure>
+      </div>
+      <div class="aside-link" data-reveal>
+        <div>
+          <p class="eyebrow" lang="en">Little Paradise</p>
+          <p>香港設計生活同靈感，見 Instagram。訂製同落單仍然由辦館跟進。</p>
+        </div>
+        <a class="btn btn-ghost" href="https://www.instagram.com/little_paradise_hk" target="_blank" rel="noopener noreferrer">@little_paradise_hk<span class="sr-only">（開新分頁）</span></a>
+      </div>
+    </section>
+
+    <section class="section container" id="farm">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" lang="en">One farmland · Two parts</p>
+        <h2>農地基地</h2>
+        <p class="lede">同一個農地，兩部分。田園體驗已經開始接待幼稚園；汽車文化基地仲起緊。辦公室喺荃灣柴灣角，農地係另一個場地，位置會喺回覆時告知。</p>
+      </div>
+      <div class="farm-panel" data-parallax-wrap>
+        <article class="farm-night" data-reveal>
+          <span class="pill pill-soon">籌備中</span>
+          <p class="eyebrow" lang="en">Chillchillcar · Coming soon</p>
+          <h3>汽車文化基地</h3>
+          <div data-parallax="28">
+            <svg class="land-art" viewBox="0 0 520 250" aria-hidden="true" focusable="false">
+              <circle cx="404" cy="54" r="14" fill="#C56A3A"/>
+              <circle cx="404" cy="54" r="34" fill="#C56A3A" opacity="0.18"/>
+              <path d="M28 132H492" stroke="#2C5A46" stroke-width="2" stroke-linecap="round"/>
+              <path d="M20 176C120 150 210 196 310 168C390 146 450 176 500 160" fill="none" stroke="#6EA58A" stroke-width="3" stroke-linecap="round"/>
+              <g transform="translate(148 118)">
+                <rect x="54" y="18" width="92" height="28" rx="14" fill="#F4F0E8"/>
+                <rect x="22" y="40" width="176" height="36" rx="16" fill="#F4F0E8"/>
+                <circle cx="62" cy="78" r="14" fill="#0E241C"/>
+                <circle cx="158" cy="78" r="14" fill="#0E241C"/>
+                <circle cx="62" cy="78" r="5" fill="#C56A3A"/>
+                <circle cx="158" cy="78" r="5" fill="#C56A3A"/>
+                <circle cx="186" cy="52" r="4" fill="#C56A3A"/>
+              </g>
+            </svg>
+          </div>
+          <p>Chillchillcar 會放喺呢個農地，作為汽車文化據點。而家未開放參觀。想知最新消息，可以先睇 Instagram。</p>
+          <div class="cta-row">
+            <a class="btn btn-on-dark" href="https://www.instagram.com/chillchillcar" target="_blank" rel="noopener noreferrer">@chillchillcar<span class="sr-only">（開新分頁）</span></a>
+          </div>
         </article>
-        <article class="service card">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1400&q=80" alt="高端汽車用品零售" />
-          <h3>高端汽車用品零售</h3>
-          <p>提供高品質汽車用品與配搭建議，兼顧功能、品質與外觀。</p>
-        </article>
-        <article class="service card">
-          <img loading="lazy" src="images/hk-design-product.jpg" alt="香港設計產品選物" />
-          <h3>香港設計產品選物</h3>
-          <p>聚焦本地設計品牌，提供有故事感的禮品及特色選物。</p>
-        </article>
-        <article class="service card">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="數碼服務規劃" />
-          <h3>數碼服務規劃（App）</h3>
-          <p>規劃中 App 將進一步提升查詢效率、流程透明度與客戶體驗。</p>
+        <article class="farm-live" data-reveal>
+          <span class="pill pill-live">現正開放</span>
+          <p class="eyebrow" lang="en">Farm experience</p>
+          <h3>田園體驗</h3>
+          <p>老師可以帶幼稚園同小朋友嚟試下做農活，親手接觸種植同田間勞動。請用 WhatsApp 講低人數、年齡同學齡，我哋會回覆檔期，並一併告知地點。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/85259239283?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E7%94%B0%E5%9C%92%E9%AB%94%E9%A9%97%EF%BC%88%E5%B9%BC%E7%A8%9A%E5%9C%92%EF%BC%89%E5%98%85%E6%AA%94%E6%9C%9F%E3%80%82" target="_blank" rel="noopener noreferrer">WhatsApp 預約體驗<span class="sr-only">（開新分頁）</span></a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="design-picks" class="container">
-      <div class="section-head">
-        <h2>香港設計選物 · 實拍</h2>
-        <p class="sub">真實照片展示，呈現產品細節與市集現場氛圍。</p>
+    <section class="section container" id="apps">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" lang="en">Our own apps</p>
+        <h2>自家 App 作品</h2>
+        <p class="lede">以下兩個 App 由東主自行開發，已經喺 App Store 推出。</p>
       </div>
-      <div class="gallery">
-        <figure class="card">
-          <img loading="lazy" src="images/hk-design-market-stall.jpg" alt="香港設計市集攤位與手作產品展示" />
-          <figcaption>香港設計市集實拍（手作產品與攤位陳列）</figcaption>
-        </figure>
-        <figure class="card">
-          <img loading="lazy" src="images/hk-design-product.jpg" alt="香港設計選物產品展示" />
-          <figcaption>本地設計產品展示（禮品及特色選物）</figcaption>
-        </figure>
-        <figure class="card">
-          <img loading="lazy" src="images/hk-design-product-closeup.jpg" alt="香港設計選物產品細節" />
-          <figcaption>節慶 / 禮品系列細節近拍</figcaption>
-        </figure>
+      <div class="apps" data-reveal-group>
+        <article class="app-card lift" data-reveal>
+          <div class="app-top">
+            <svg class="app-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="18" fill="currentColor"/>
+              <path d="M16 40v-4c0-2 2-4 6-5l6-8h14l6 8c4 1 6 3 6 5v4" fill="none" stroke="#F4F0E8" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+              <path d="M16 40h34" stroke="#F4F0E8" stroke-width="3.2" stroke-linecap="round"/>
+              <circle cx="24" cy="44" r="3.2" fill="#F4F0E8"/>
+              <circle cx="44" cy="44" r="3.2" fill="#F4F0E8"/>
+              <circle cx="48" cy="33" r="2.3" fill="#C56A3A"/>
+            </svg>
+            <div>
+              <p class="app-en" lang="en">Carhub · On the App Store</p>
+              <h3>香港洗車地圖</h3>
+            </div>
+          </div>
+          <p>香港車主用嘅地圖。可以搵洗車店、適合停車食飯嘅地方，同兜風路線。</p>
+          <ul class="app-points">
+            <li>搜尋同篩選洗車店</li>
+            <li>適合落車停留嘅食店同景點</li>
+            <li>收藏，同埋轉去地圖導航</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://apps.apple.com/hk/app/id6760562080" target="_blank" rel="noopener noreferrer">在 App Store 查看<span class="sr-only">（開新分頁）</span></a>
+        </article>
+        <article class="app-card lift" data-reveal>
+          <div class="app-top">
+            <svg class="app-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="18" fill="currentColor"/>
+              <rect x="20" y="14" width="22" height="32" rx="6" fill="none" stroke="#F4F0E8" stroke-width="3"/>
+              <path d="M26 28h12M26 34h8" stroke="#F4F0E8" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="43" cy="42" r="7" fill="#C56A3A"/>
+              <path d="M39.8 42.1l2.1 2.2 4.2-4.6" fill="none" stroke="#F4F0E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <p class="app-en" lang="en">Electrician exam · On the App Store</p>
+              <h3>香港電工筆試</h3>
+            </div>
+          </div>
+          <p>電工考試練習。App Store 名稱係「香港電工筆試」，私隱政策入面叫做香港電工考試模擬。</p>
+          <ul class="app-points">
+            <li>題庫練習</li>
+            <li>模擬考試</li>
+            <li>錯題重溫</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://apps.apple.com/hk/app/id6760467583" target="_blank" rel="noopener noreferrer">在 App Store 查看<span class="sr-only">（開新分頁）</span></a>
+        </article>
       </div>
     </section>
 
-    <section id="about" class="container">
-      <div class="section-head">
+    <section class="section container" id="why">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" lang="en">Why Kau Yan</p>
         <h2>點解客戶揀我哋</h2>
-        <p class="sub">不只交貨，而是提供更可控、更省時的採購流程。</p>
+        <p class="lede">唔止交貨，而係將個流程變得可控、省時間。</p>
       </div>
-      <div class="about-grid">
-        <article class="about-card card">
+      <div class="why" data-reveal-group>
+        <article data-reveal>
           <h3>流程清晰</h3>
-          <p>由需求到交付每一步都可追蹤，減少反覆溝通成本。</p>
+          <p>由需求、報價、協調到交付，每一步都講得明，減少來回溝通。</p>
         </article>
-        <article class="about-card card">
+        <article data-reveal>
           <h3>回應快速</h3>
-          <p>一般查詢 1–3 個工作天回覆，先處理最關鍵需求。</p>
+          <p>一般查詢 1 至 3 個工作天內回覆，先處理最關鍵嘅需要。</p>
         </article>
-        <article class="about-card card">
+        <article data-reveal>
           <h3>品質穩定</h3>
-          <p>兼顧機構標準與零售審美，提升整體採購體驗。</p>
+          <p>機構規格同訂製細節一齊把關，過程有交代，交得出、跟得住。</p>
         </article>
       </div>
     </section>
 
-    <section id="brands" class="container">
-      <div class="brand-box card">
-        <h3>品牌與社交媒體</h3>
-        <p class="sub">同一個地方睇晒我哋兩個品牌嘅定位同 Instagram 最新內容。</p>
-
-        <div class="brand-grid" aria-label="品牌與 Instagram">
-          <article class="brand-item">
-            <h4>Little Paradise</h4>
-            <p>香港生活選物與設計靈感。</p>
-            <a class="btn ghost" href="https://www.instagram.com/little_paradise_hk" target="_blank" rel="noopener noreferrer">Follow @little_paradise_hk</a>
-          </article>
-
-          <article class="brand-item">
-            <h4>Chillchillcar</h4>
-            <p>汽車精品與車生活內容。</p>
-            <a class="btn ghost" href="https://www.instagram.com/chillchillcar" target="_blank" rel="noopener noreferrer">Follow @chillchillcar</a>
-          </article>
-        </div>
-      </div>
+    <section class="container" aria-labelledby="motto-title">
+      <figure class="motto">
+        <blockquote id="motto-title">萬事萬托，萬試萬靈</blockquote>
+        <figcaption>唔係誇大承諾，而係盡力將每個查詢處理得清楚、有交代、跟得到。</figcaption>
+      </figure>
     </section>
 
-    <section id="faq" class="container">
-      <div class="section-head">
+    <section class="section container" id="faq">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" lang="en">FAQ</p>
         <h2>常見問題</h2>
-        <p class="sub">先解答最常見查詢，幫你更快準備資料同取得報價。</p>
+        <p class="lede">先答最常問嘅幾樣，方便你準備資料同攞報價。</p>
       </div>
-      <div class="faq-list">
-        <article class="faq-item card">
+      <div class="faq" data-reveal-group>
+        <article data-reveal>
           <h3>你哋主要服務邊類客戶？</h3>
-          <p>主要服務學校、政府部門、NGO、企業及本地零售客戶，按需要協助採購、報價、供應協調及交付跟進。</p>
+          <p>主要服務學校、政府部門、非政府機構同公司，協助採購、報價、供應協調同交付跟進。訂製禮品同樣面向機構。田園體驗歡迎幼稚園查詢。</p>
         </article>
-        <article class="faq-item card">
+        <article data-reveal>
           <h3>查詢報價前要準備咩資料？</h3>
-          <p>建議先提供產品類型、數量、預算、交付日期、送貨地點及有冇指定品牌或規格，方便更快回覆。</p>
+          <p>建議先講產品類型、數量、預算、交付日期、送貨地點，以及有冇指定品牌、規格或文件要求。資料越齊，回覆越快。</p>
         </article>
-        <article class="faq-item card">
+        <article data-reveal>
           <h3>一般幾耐會回覆？</h3>
-          <p>一般查詢會於 1 至 3 個工作天內回覆。資料越完整，報價及跟進會越快。</p>
+          <p>一般查詢會喺 1 至 3 個工作天內回覆。</p>
         </article>
-        <article class="faq-item card">
-          <h3>是否可以處理香港設計選物或禮品採購？</h3>
-          <p>可以。我們可按用途、對象及預算，協助整理本地設計選物、禮品方向及採購安排。</p>
+        <article data-reveal>
+          <h3>訂製禮品點樣合作？</h3>
+          <p>香港設計訂製紀念品同禮品面向機構。可以按用途、對象同預算一齊訂方向，再由辦館協調落單同交付。</p>
+        </article>
+        <article data-reveal>
+          <h3>田園體驗點樣預約？</h3>
+          <p>田園體驗已經開放。幼稚園老師可以帶小朋友嚟農地試下做農活。請用 WhatsApp 5923 9283 講低人數、年齡同學齡，我哋會回覆檔期，並一併告知地點。汽車文化基地仍然籌備中，未開放參觀。</p>
+        </article>
+        <article data-reveal>
+          <h3>你哋有冇自己開發嘅 App？</h3>
+          <p>有。香港洗車地圖（Carhub）同香港電工筆試已經喺 App Store 推出，由東主自行開發同維護。</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <div class="contact card">
-        <h2>聯絡我們</h2>
-        <p>公司名稱：<strong>救恩辦館有限公司 Kau Yan Store Limited</strong></p>
-        <p>電話 / WhatsApp：<strong>5923 9283</strong></p>
-        <p>電郵：<strong>info@kauyanstore.com</strong></p>
-        <p>地址：<strong>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</strong></p>
-        <div class="hero-cta">
-          <a class="btn primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 立即查詢</a>
-          <a class="btn ghost" href="mailto:info@kauyanstore.com">電郵報價</a>
+    <section class="section container" id="contact">
+      <div class="contact-panel" data-reveal>
+        <div>
+          <p class="eyebrow" lang="en">Contact</p>
+          <h2>聯絡我們</h2>
+          <p class="lede">公司名稱：救恩辦館有限公司 Kau Yan Store Limited</p>
+          <a class="contact-phone" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">5923 9283<span class="sr-only">，WhatsApp（開新分頁）</span></a>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/85259239283" target="_blank" rel="noopener noreferrer">WhatsApp 查詢<span class="sr-only">（開新分頁）</span></a>
+            <a class="btn btn-ghost" href="mailto:info@kauyanstore.com">電郵報價</a>
+          </div>
         </div>
+        <dl class="contact-list">
+          <div>
+            <dt>電話 / WhatsApp</dt>
+            <dd><a href="tel:+85259239283">5923 9283</a></dd>
+          </div>
+          <div>
+            <dt>電郵</dt>
+            <dd><a href="mailto:info@kauyanstore.com">info@kauyanstore.com</a></dd>
+          </div>
+          <div>
+            <dt>地址</dt>
+            <dd>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</dd>
+          </div>
+        </dl>
       </div>
     </section>
   </main>
 
-  <footer class="container">
-    <p>萬事萬托，萬試萬靈</p>
-    <p><a href="privacy.html">私隱政策</a></p>
-    <p>© 2026 Kau Yan Store Limited. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/logo/mark-on-dark.svg" alt="" width="44" height="44" />
+          <span class="brand-text">
+            <span class="brand-zh">救恩辦館</span>
+            <span class="brand-en" lang="en">Kau Yan Store</span>
+          </span>
+        </a>
+        <p class="footer-motto">萬事萬托，萬試萬靈</p>
+      </div>
+      <div>
+        <p class="footer-label" lang="en">Office</p>
+        <address>香港新界荃灣柴灣角街83-93號榮興工業大廈11樓12B室</address>
+      </div>
+      <div>
+        <p class="footer-label" lang="en">Contact</p>
+        <p><a href="tel:+85259239283">5923 9283</a></p>
+        <p><a href="mailto:info@kauyanstore.com">info@kauyanstore.com</a></p>
+      </div>
+      <div>
+        <p class="footer-label" lang="en">Index</p>
+        <div class="footer-links">
+          <a href="about.html">關於</a>
+          <a href="contact.html">聯絡</a>
+          <a href="privacy.html">私隱政策</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© 2026 Kau Yan Store Limited. All Rights Reserved.</p>
+      <p>救恩辦館有限公司</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PROPOSAL — pending owner approval. Not an approved final logo. Replaces the rejected gate seal. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">救恩辦館標誌提案：圓字 KY（深色背景）</title>
+  <desc id="desc">圓形入面嘅 KY 字母，上方一點銅色。圓形同字母都係橫向閱讀，唔係直立石碑。此為提案。</desc>
+  <circle cx="32" cy="32" r="32" fill="#F4F0E8"/>
+  <path fill="#1B4336" d="M24.845 42.59 16.265 31.550000000000004 24.575000000000003 21.410000000000004H30.395L21.035 32.42V30.500000000000004L30.695 42.59ZM12.035 42.59V21.410000000000004H16.745V42.59Z"/>
+    <path fill="#1B4336" d="M40.295 34.7 32.135 21.410000000000004H37.595L43.865 32.150000000000006H40.355000000000004L46.625 21.410000000000004H51.965L43.745000000000005 34.7ZM39.725 42.59V32.540000000000006H44.435V42.59Z"/>
+  <circle cx="32" cy="18.5" r="3.15" fill="#C56A3A"/>
+</svg>

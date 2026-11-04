@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PROPOSAL — pending owner approval. Not an approved final logo. Replaces the rejected gate seal. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 56" role="img" aria-labelledby="title desc">
+  <title id="title">概念三：橫芽（淺色背景）</title>
+  <desc id="desc">橫向膠囊入面兩片圓葉同一粒銅種子。闊大於高，唔係直立碑形。此為提案。</desc>
+  <rect width="104" height="56" rx="28" fill="#1B4336"/>
+  <path d="M46 34c-10-1-18-8-14-14 6-1 12 6 14 14z" fill="#F4F0E8"/>
+  <path d="M58 34c10-2 16-12 8-16-6 1-10 8-8 16z" fill="#F4F0E8"/>
+  <circle cx="52" cy="33" r="4.2" fill="#C56A3A"/>
+</svg>

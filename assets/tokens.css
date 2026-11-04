@@ -1,0 +1,57 @@
+/* Kau Yan Store Limited — design tokens. Rationale lives in BRAND.md. */
+
+:root {
+  --color-paper: #f4f0e8;
+  --color-paper-raised: #fbf8f2;
+  --color-paper-sunk: #e8e1d4;
+  --color-ink: #1c241f;
+  --color-ink-soft: #3a463f;
+  --color-muted: #4e5852;
+  --color-pine: #1b4336;
+  --color-pine-deep: #14352b;
+  --color-night: #0e241c;
+  --color-moss: #3e6b56;
+  --color-copper: #c56a3a;
+  --color-copper-deep: #8c3e16;
+  --color-brass: #e0b15a;
+  --color-mist: #d5ddd6;
+  --line: rgba(28, 36, 31, 0.12);
+  --line-strong: rgba(28, 36, 31, 0.22);
+  --line-light: rgba(244, 240, 232, 0.16);
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+  --radius-2xl: 56px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(14, 36, 28, 0.05);
+  --shadow-md: 0 16px 40px rgba(14, 36, 28, 0.08);
+  --shadow-lg: 0 28px 70px rgba(14, 36, 28, 0.14);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+  --space-9: 104px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.22, 1.2, 0.36, 1);
+  --ease-inertial: cubic-bezier(0.19, 1, 0.22, 1);
+  --dur-fast: 180ms;
+  --dur: 640ms;
+  --dur-slow: 1000ms;
+
+  --font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --font-sans: "Noto Sans TC", "PingFang HK", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-latin: "Outfit", "Noto Sans TC", sans-serif;
+
+  --header-h: 76px;
+  --max: 1160px;
+}
