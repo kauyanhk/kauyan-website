@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PROPOSAL ONLY. Not applied to the live site. Distinct from the rejected gate, KY circle, double circle, and sprout. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 52" role="img" aria-labelledby="title desc">
+  <title id="title">方向四：彎路</title>
+  <desc id="desc">兩條平行路一齊轉彎。單色。提案，未套用。</desc>
+  <g fill="none" stroke="#1B4336" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 18h30c11 0 16 6 16 16"/>
+  <path d="M4 34h34c15 0 26-4 26-16V6"/>
+</g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PROPOSAL ONLY. Not applied to the live site. Distinct from the rejected gate, KY circle, double circle, and sprout. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 64" role="img" aria-labelledby="title desc">
+  <title id="title">方向三：田壟</title>
+  <desc id="desc">三條敞開嘅田畝線，冇外框。單色。提案，未套用。</desc>
+  <g fill="none" stroke="#1B4336" stroke-width="9" stroke-linecap="round">
+  <path d="M18 12c8 6 18 6 28 0"/>
+  <path d="M6 32c12 8 40 8 54 0"/>
+  <path d="M14 52c9 6 24 6 34 0"/>
+</g>
+</svg>
